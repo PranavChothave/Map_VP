@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Campus Tour</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/ec84f8035f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <section class="header"> 
+        
+        <!-- <div id="google_translate_element" class="google"> </div> 
+        <script type="text/javascript"> 
+        function googleTranslateElementInit() { 
+            new google.translate.TranslateElement( {pageLanguage: 'en'}, 'google_translate_element' ); }
+            
+        </script> 
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+       -->
+
+         <!-- Input area -->
+     <div class="microphone">
+        <i class="fa fa-microphone" onclick="record()"></i>
+
+        <label for="Speech Recognition" onclick="record()">Tap to Speak</label>
+
+        <!-- <input type="text" name="" id="speechToText" placeholder="Tap to Speak" onclick="record()" style="display: block !important;"> -->
+        <script>
+            function record() {
+                var recognition = new webkitSpeechRecognition();
+                recognition.lang = "en-GB";
+                recognition.onresult = function(event) {
+                    //console.log(event);
+                    //document.getElementById('speechToText').value = event.results[0][0].transcript;
+                    console.log(event.results[0][0].transcript);
+                    //alert(event.results[0][0].transcript);
+                    var voiceInput = event.results[0][0].transcript.toLowerCase();
+                    if(voiceInput == "home"){
+                        window.location.href = "index.html";
+                    }else if(voiceInput == "biotech"){
+                        window.location.href = "Biotech.html";
+                    }
+                    else if(voiceInput == "arts science college"){
+                        window.location.href = "Arts,ScienceCollege.html";
+                    }
+                    else if(voiceInput == "canteen"){
+                        window.location.href = "Canteen.html";
+                    }
+                    else if(voiceInput == "boys hostel a"){
+                        window.location.href = "Boys Hostel A.html";
+                    }
+                    else if(voiceInput == "boys hostel b"){
+                        window.location.href = "Boys Hostel B.html";
+                    }
+                    else if(voiceInput == "boys hostel c"){
+                        window.location.href = "Boys Hostel C.html";
+                    }
+                    else if(voiceInput == "boys hostel d"){
+                        window.location.href = "Boys Hostel D.html";
+                    }
+                    else if(voiceInput == "girls hostel a"){
+                        window.location.href = "Girl's Hostel A,B,& C.html";
+                    }
+                    else if(voiceInput == "girls hostel d"){
+                        window.location.href = "Girls Hostel D.html";
+                    }
+                    
+                    else if(voiceInput == "cbse 1"){
+                        window.location.href = "CBSE 1.html";
+                    }
+                    else if(voiceInput == "cbse 2"){
+                        window.location.href = "CBSE 2.html";
+                    }
+                    else if(voiceInput == "cyrus school"){
+                        window.location.href = "Dr.CyrsSchool.html";
+                    }
+                    else if(voiceInput == "gadima"){
+                        window.location.href = "GaDiMa.html";
+                    }
+                    else if(voiceInput == "government hospital"){
+                        window.location.href = "Government Hospital.html";
+                    }
+                    else if(voiceInput == "gymnasium"){
+                        window.location.href = "Gymnasium.html";
+                    }
+                    else if(voiceInput == "law college"){
+                        window.location.href = "LawCollege.html";
+                    }
+                    else if(voiceInput == "marathi school"){
+                        window.location.href = "MarathiSchool.html";
+                    }
+                    else if(voiceInput == "museum"){
+                        window.location.href = "Museum.html";
+                    }
+                    else if(voiceInput == "nakshatra garden"){
+                        window.location.href = "Nakshatra.html";
+                    }
+                    else if(voiceInput == "new english school"){
+                        window.location.href = "New English School.html";
+                    }
+                    else if(voiceInput == "viit"){
+                        window.location.href = "VIIT.html";
+                    }
+                    else if(voiceInput == "vpkbiet"){
+                        window.location.href = "VPKBIET.html";
+                    }
+                    else if(voiceInput == "architecture college"){
+                        window.location.href = "VPSOA.html";
+                    }
+                    else if(voiceInput == "workshop"){
+                        window.location.href = "workshop.html";
+                    }
+                    else{
+                        alert("Invalid Input!");
+                    }
+                }
+                recognition.start();
+            }
+        </script>
+    </div>
+
+    
+
+        <nav class="first">
+            <a href="index.html"><img src="images/VPKBIET-removebg-preview.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="" title="SE Project : AI & DS(2020)">ABOUT</a></li>
+                    <li><a href="" title="For any queries or suggestions, mail us at : teammapvp@gmail.com">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        
+
+    <div class="text-box">
+        <h1>MapVP</h1>
+        <p>Navigation just got Simple just select the desired location<br>and get to the destination easily!</p>
+    </div>
+
+    <nav class="xyz">
+        <label for="btn" class="button">Select Destination
+        <span class="fas fa-caret-down"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul class="menu">
+           <li><a href="VPKBIET.html">VPKBIET Main Building</a></li>
+           <li><a href="VPSOA.html">VPSOA / VP New Building</a></li>
+           <li><a href="VIIT.html">VIIT Building</a></li>
+           <li><a href="workshop.html">Workshop</a></li>
+           
+           
+
+
+
+           <!-- <li>
+              <label for="btn-2" class="first">xyz
+              <span class="fas fa-caret-down"></span>
+              </label>
+              <input type="checkbox" id="btn-2">
+              <ul>
+                 <li><a href="#">Pages</a></li>
+              </ul>
+           </li> -->
+
+           <li>
+              <label for="btn-3" class="second">Boy's Hostel 
+              <span class="fas fa-caret-down"></span>
+              </label>
+              <input type="checkbox" id="btn-3">
+              <ul>
+                 <li><a href="Boys Hostel A.html">Boy's Hostel A</a></li>
+                 <li><a href="Boys Hostel B.html">Boy's Hostel B</a></li>
+                 <li><a href="Boys Hostel C.html">Boy's Hostel C</a></li>
+                 <li><a href="Boys Hostel D.html">Boy's Hostel D</a></li>
+              </ul>
+           </li>
+
+           <!-- <li>
+            <label for="btn-2" class="first">Girl's Hostel 
+            <span class="fas fa-caret-down"></span>
+            </label>
+            <input type="checkbox" id="btn-2">
+            <ul>
+               <li><a href="#">Girl's Hostel A</a></li>
+               <li><a href="#">Girl's Hostel B</a></li>
+               <li><a href="#">Girl's Hostel C</a></li>
+               <li><a href="#">Girl's Hostel D</a></li>
+               <li><a href="#">Girl's Hostel E</a></li>
+
+            </ul>
+            </li> -->
+           
+            <li><a href="Girl's Hostel A,B,& C.html">Girl's Hostel A, B & C</a></li>
+            <li><a href="Girls Hostel D.html">Girl's Hostel D</a></li>
+            
+           <li><a href="Canteen.html">Canteen</a></li>
+           <li><a href="Government Hospital.html">Government Hospital</a></li>
+           <li><a href="Gymnasium.html">Gymnasium</a></li>
+           <li><a href="Nakshatra.html">Nakshatra Garden</a></li>
+           <li><a href="Museum.html">Museum / Janvasthu Shangrahlaya</a></li>
+           <li><a href="GaDiMa.html">Ga.Di.Ma Auditorium</a></li>
+           <li><a href="LawCollege.html">Vasantrao Pawar Law College</li>
+           <li><a href="Biotech.html">School of Biotechnology</a></li>
+           <li><a href="Arts,ScienceCollege.html">Art's, Science & Commerce College</a></li>
+           <li><a href="CBSE 1.html">VP's English Medium School (CBSE NO.1)</a></li>
+           <li><a href="CBSE 2.html">VP's English Medium School (CBSE NO.2)</a></li>
+           <li><a href="MarathiSchool.html">Marathi Medium School</a></li>
+           <li><a href="New English School.html">New English Medium School</a></li>
+           <li><a href="Dr.CyrusSchool.html">Dr. Cyrus Poonawala CBSE School</a></li>
+
+        </ul>
+     </nav>
+
+     
+     
+</section>
+
+<!--Javascript for toggle Menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right ="0";
+    }
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+
+    //This code used to rotate drop icon(-180deg)
+    
+         $('nav .button').click(function(){
+           $('nav .button span').toggleClass("rotate");
+         });
+           $('nav ul li .first').click(function(){
+             $('nav ul li .first span').toggleClass("rotate");
+           });
+           $('nav ul li .second').click(function(){
+             $('nav ul li .second span').toggleClass("rotate");
+           });
+      
+
+</script>
+
+
+</body>
+</html> 
+

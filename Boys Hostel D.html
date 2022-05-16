@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Boy's Hostel D</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec84f8035f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="header">
+        
+        <div id="google_translate_element" class="google"> </div> 
+        <script type="text/javascript"> 
+        function googleTranslateElementInit() { 
+            new google.translate.TranslateElement( {pageLanguage: 'en'}, 'google_translate_element' ); }
+            
+        </script> 
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        
+                 <!-- Input area -->
+                 <div class="microphone">
+                    <i class="fa fa-microphone" onclick="record()"></i>
+            
+                    <label for="Speech Recognition" onclick="record()">Tap to Speak</label>
+            
+                    <!-- <input type="text" name="" id="speechToText" placeholder="Tap to Speak" onclick="record()" style="display: block !important;"> -->
+                    <script>
+                        function record() {
+                            var recognition = new webkitSpeechRecognition();
+                            recognition.lang = "en-GB";
+                            recognition.onresult = function(event) {
+                                //console.log(event);
+                                //document.getElementById('speechToText').value = event.results[0][0].transcript;
+                                console.log(event.results[0][0].transcript);
+                                //alert(event.results[0][0].transcript);
+                                var voiceInput = event.results[0][0].transcript.toLowerCase();
+                                if(voiceInput == "home"){
+                                    window.location.href = "index.html";
+                                }else if(voiceInput == "biotech"){
+                                    window.location.href = "Biotech.html";
+                                }
+                                else if(voiceInput == "arts science college"){
+                                    window.location.href = "Arts,ScienceCollege.html";
+                                }
+                                else if(voiceInput == "canteen"){
+                                    window.location.href = "Canteen.html";
+                                }
+                                else if(voiceInput == "boys hostel a"){
+                                    window.location.href = "Boys Hostel A.html";
+                                }
+                                else if(voiceInput == "boys hostel b"){
+                                    window.location.href = "Boys Hostel B.html";
+                                }
+                                else if(voiceInput == "boys hostel c"){
+                                    window.location.href = "Boys Hostel C.html";
+                                }
+                                else if(voiceInput == "boys hostel d"){
+                                    window.location.href = "Boys Hostel D.html";
+                                }
+                                else if(voiceInput == "girls hostel a"){
+                                    window.location.href = "Girl's Hostel A,B,& C.html";
+                                }
+                                else if(voiceInput == "girls hostel d"){
+                                    window.location.href = "Girls Hostel D.html";
+                                }
+                                
+                                else if(voiceInput == "cbse 1"){
+                                    window.location.href = "CBSE 1.html";
+                                }
+                                else if(voiceInput == "cbse 2"){
+                                    window.location.href = "CBSE 2.html";
+                                }
+                                else if(voiceInput == "cyrus school"){
+                                    window.location.href = "Dr.CyrsSchool.html";
+                                }
+                                else if(voiceInput == "gadima"){
+                                    window.location.href = "GaDiMa.html";
+                                }
+                                else if(voiceInput == "government hospital"){
+                                    window.location.href = "Government Hospital.html";
+                                }
+                                else if(voiceInput == "gymnasium"){
+                                    window.location.href = "Gymnasium.html";
+                                }
+                                else if(voiceInput == "law college"){
+                                    window.location.href = "LawCollege.html";
+                                }
+                                else if(voiceInput == "marathi school"){
+                                    window.location.href = "MarathiSchool.html";
+                                }
+                                else if(voiceInput == "museum"){
+                                    window.location.href = "Museum.html";
+                                }
+                                else if(voiceInput == "nakshatra garden"){
+                                    window.location.href = "Nakshatra.html";
+                                }
+                                else if(voiceInput == "new english school"){
+                                    window.location.href = "New English School.html";
+                                }
+                                else if(voiceInput == "viit"){
+                                    window.location.href = "VIIT.html";
+                                }
+                                else if(voiceInput == "vpkbiet"){
+                                    window.location.href = "VPKBIET.html";
+                                }
+                                else if(voiceInput == "architecture college"){
+                                    window.location.href = "VPSOA.html";
+                                }
+                                else if(voiceInput == "workshop"){
+                                    window.location.href = "workshop.html";
+                                }
+                                else{
+                                    alert("Invalid Input!");
+                                }
+                            }
+                            recognition.start();
+                        }
+                    </script>
+                </div>
+
+        <nav>
+            <a href="index.html"><img src="images/VPKBIET-removebg-preview.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="" title="SE Project : AI & DS(2020)">ABOUT</a></li>
+                    <li><a href="" title="For any queries or suggestions, mail us at : teammapvp@gmail.com">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+<div class="container">
+
+    <h1> Boy's Hostel D </h1>
+    <p>Hostel-D has capacity of approximately 180 rooms<br>Attached Mess, Study Hall, WiFi Enabled, 24 Hours Electricity and Water Supply </p>
+    <p> click on "Directions" to get your destination </p>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30326.1250928884!2d74.59744155406949!3d18.174707063103455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc39fbc757d0d17%3A0x8972658943d873a3!2sVp%20Boys%20Hostel%20D!5e0!3m2!1sen!2sin!4v1651851212456!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+</section>
+
+
+
+<!--Javascript for toggle Menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right ="0";
+    }
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+
+</script>
+
+</body>
+</html> 
